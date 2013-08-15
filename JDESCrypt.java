@@ -29,7 +29,7 @@ import org.apache.commons.codec.binary.Base64;
 
 public class JDESCrypt
 {
-  static void encode(byte[] bytes, OutputStream out, String pass) throws Exception
+  public static void encode(byte[] bytes, OutputStream out, String pass) throws Exception
   {
     Cipher c = Cipher.getInstance("DES");
     Key k = new SecretKeySpec( pass.getBytes(), "DES");
@@ -40,7 +40,7 @@ public class JDESCrypt
     cos.close();
   }
 
-  static byte[] decode(InputStream is, String pass) throws Exception
+  public static byte[] decode(InputStream is, String pass) throws Exception
   {
     Cipher c = Cipher.getInstance("DES");
     Key k = new SecretKeySpec(pass.getBytes(), "DES");
