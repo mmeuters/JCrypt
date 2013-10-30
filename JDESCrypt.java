@@ -1,3 +1,5 @@
+package rp.copy.jcrypt;
+
 /*
 The MIT License (MIT)
 
